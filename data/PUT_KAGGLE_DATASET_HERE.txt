@@ -1,0 +1,7 @@
+The actual dataset is intentionally not fabricated or altered.
+
+Run:
+python download_dataset.py
+
+The script downloads the Kaggle Netflix Movies and TV Shows dataset and saves:
+data/netflix_titles.csv

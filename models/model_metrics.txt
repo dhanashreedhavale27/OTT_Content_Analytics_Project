@@ -1,0 +1,30 @@
+OTT Rating Prediction Model
+--------------------------------
+Dataset rows used: 8788
+Training rows: 7030
+Testing rows: 1758
+Model: Random Forest Classifier
+Target: Rating category
+
+Accuracy: 0.4477
+Weighted F1 Score: 0.4662
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           G       0.36      0.50      0.42         8
+          NR       0.18      0.31      0.23        16
+          PG       0.40      0.47      0.43        57
+       PG-13       0.27      0.38      0.32        98
+           R       0.41      0.54      0.47       160
+       TV-14       0.51      0.43      0.46       432
+        TV-G       0.08      0.18      0.11        44
+       TV-MA       0.71      0.50      0.59       642
+       TV-PG       0.22      0.31      0.26       173
+        TV-Y       0.42      0.46      0.44        61
+       TV-Y7       0.38      0.45      0.41        67
+
+    accuracy                           0.45      1758
+   macro avg       0.36      0.41      0.38      1758
+weighted avg       0.51      0.45      0.47      1758
+

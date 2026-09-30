@@ -1,0 +1,137 @@
+PROJECT REPORT CONTENT
+
+TITLE:
+OTT CONTENT ANALYTICS AND RATING PREDICTION USING MACHINE LEARNING AND STREAMLIT
+
+1. OBJECTIVE
+
+The objective of this project is to develop an interactive OTT content analytics and machine learning application using Streamlit. The application uses a Kaggle dataset containing Netflix movies and TV shows. It allows users to explore OTT content and predict the rating category of a new content item based on its characteristics.
+
+2. PROBLEM STATEMENT
+
+OTT platforms contain a large number of movies and TV shows with different genres, countries, release years, durations and audience rating categories. Analysing such data manually can be difficult. The problem is to develop a simple interactive system that can analyse OTT content and use machine learning to predict a likely rating category from selected content characteristics.
+
+3. INPUTS
+
+The prediction module accepts:
+- Content Type
+- Release Year
+- Duration
+- Primary Country
+- Primary Genre
+
+4. OUTPUT
+
+The system predicts an OTT content rating category such as:
+- TV-MA
+- TV-14
+- TV-PG
+- PG-13
+- PG
+- R
+- G
+- and other sufficiently represented rating categories in the dataset.
+
+The application also displays the top prediction probabilities.
+
+5. DATASET
+
+The project uses the Netflix Movies and TV Shows dataset available on Kaggle.
+
+Dataset page:
+https://www.kaggle.com/datasets/shivamb/netflix-shows
+
+Important fields include:
+- show_id
+- type
+- title
+- director
+- cast
+- country
+- date_added
+- release_year
+- rating
+- duration
+- listed_in
+- description
+
+6. DATA PREPROCESSING
+
+The following preprocessing steps are applied:
+1. Missing categorical values are handled.
+2. The first country is extracted from the country field.
+3. The first genre is extracted from the listed_in field.
+4. Numeric information is extracted from duration.
+5. Release year is converted to numeric format.
+6. Rating classes with very few records are removed for a more stable classroom classification model.
+7. Categorical variables are converted using One-Hot Encoding.
+
+7. MACHINE LEARNING
+
+A Random Forest Classifier is used.
+
+The dataset is divided into:
+- 80% training data
+- 20% testing data
+
+The model is evaluated using:
+- Accuracy
+- Weighted F1 Score
+- Classification Report
+
+The trained model is saved using Joblib.
+
+8. STREAMLIT APPLICATION
+
+The Streamlit application contains three sections:
+
+A. Dashboard
+Displays:
+- Total titles
+- Movies
+- TV Shows
+- Years covered
+- Movies vs TV Shows chart
+- Rating distribution
+- Release trend
+
+B. Explore Dataset
+Allows users to:
+- Filter by content type
+- Filter by rating
+- Filter by release year
+- View filtered records
+
+C. Rating Predictor
+Allows users to enter content characteristics and obtain a predicted rating category.
+
+9. ENHANCEMENTS OVER THE REFERENCE PROJECT
+
+The reference project uses a housing dataset and predicts house price using area as the primary input.
+
+This project changes the domain to OTT content and adds:
+- A real Kaggle dataset
+- Multiple prediction inputs
+- Classification instead of simple regression
+- Data preprocessing pipeline
+- Interactive dashboard
+- Dataset filtering
+- Prediction probabilities
+- Model evaluation
+- Separate training and prediction modules
+- Automated Kaggle dataset download
+
+10. LIMITATIONS
+
+The prediction should be treated as an educational machine learning output rather than an actual platform decision. The dataset represents Netflix catalogue information and does not contain individual viewer preference data. Therefore, the model predicts rating categories from catalogue characteristics rather than personal viewer behaviour.
+
+11. FUTURE ENHANCEMENTS
+
+Future versions could include:
+- Recommendation based on genre similarity
+- Multiple OTT platforms
+- More advanced NLP using descriptions
+- Sentiment analysis of reviews
+- User-specific recommendations
+- More recent datasets
+- Model comparison between Random Forest, Logistic Regression and Gradient Boosting
