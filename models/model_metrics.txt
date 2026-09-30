@@ -6,25 +6,25 @@ Testing rows: 1758
 Model: Random Forest Classifier
 Target: Rating category
 
-Accuracy: 0.4477
-Weighted F1 Score: 0.4662
+Accuracy: 0.4420
+Weighted F1 Score: 0.4676
 
 Classification Report:
               precision    recall  f1-score   support
 
-           G       0.36      0.50      0.42         8
-          NR       0.18      0.31      0.23        16
-          PG       0.40      0.47      0.43        57
-       PG-13       0.27      0.38      0.32        98
-           R       0.41      0.54      0.47       160
-       TV-14       0.51      0.43      0.46       432
-        TV-G       0.08      0.18      0.11        44
-       TV-MA       0.71      0.50      0.59       642
-       TV-PG       0.22      0.31      0.26       173
-        TV-Y       0.42      0.46      0.44        61
-       TV-Y7       0.38      0.45      0.41        67
+           G       0.21      0.75      0.32         8
+          NR       0.07      0.62      0.13        16
+          PG       0.51      0.49      0.50        57
+       PG-13       0.37      0.50      0.42        98
+           R       0.37      0.58      0.45       160
+       TV-14       0.53      0.45      0.49       432
+        TV-G       0.07      0.16      0.10        44
+       TV-MA       0.75      0.44      0.56       642
+       TV-PG       0.29      0.25      0.27       173
+        TV-Y       0.43      0.52      0.47        61
+       TV-Y7       0.36      0.46      0.41        67
 
-    accuracy                           0.45      1758
-   macro avg       0.36      0.41      0.38      1758
-weighted avg       0.51      0.45      0.47      1758
+    accuracy                           0.44      1758
+   macro avg       0.36      0.48      0.37      1758
+weighted avg       0.54      0.44      0.47      1758
 

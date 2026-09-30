@@ -85,7 +85,9 @@ preprocessor = ColumnTransformer([
 model = Pipeline([
     ("preprocessor", preprocessor),
     ("classifier", RandomForestClassifier(
-        n_estimators=200,
+        n_estimators=100,
+        max_depth=15,
+        min_samples_leaf=2,
         random_state=42,
         class_weight="balanced"
     ))
@@ -97,7 +99,7 @@ predictions = model.predict(X_test)
 accuracy = accuracy_score(y_test, predictions)
 f1 = f1_score(y_test, predictions, average="weighted")
 
-joblib.dump(model, MODEL_PATH)
+joblib.dump(model, MODEL_PATH, compress=3)
 
 report = classification_report(y_test, predictions, zero_division=0)
 

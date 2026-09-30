@@ -21,6 +21,14 @@ def load_data():
 def load_model():
     if os.path.exists(MODEL_PATH):
         return joblib.load(MODEL_PATH)
+    
+    # Fallback: auto-train in ~2 seconds if CSV exists but .pkl was not found
+    if os.path.exists(DATA_PATH):
+        with st.spinner("Initializing rating predictor model (first run only)..."):
+            import subprocess
+            subprocess.run(["python", "train.py"], check=True)
+            if os.path.exists(MODEL_PATH):
+                return joblib.load(MODEL_PATH)
     return None
 
 df = load_data()
